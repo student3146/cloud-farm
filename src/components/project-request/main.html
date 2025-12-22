@@ -1,0 +1,30 @@
+<section class="project-request">
+  <div class="project-request__container container">
+    <div class="project-request__wrapper">
+      <h2 class="project-request--title">
+        Leave a request, and we will offer a customized solution for your
+        project
+      </h2>
+      <img class="project-request-img-cloud" src="./img/cloud-form.png" alt="cloud-form-img">
+      <form class="project-request--form">
+        <h3 class="project-request--form--title">Contact us</h3>
+        <label for="name">
+          <span>Name</span>
+          <input type="text" name="name" id="name" />
+        </label>
+        <label for="email">
+          <span>Email</span>
+          <input type="text" name="email" id="email" />
+        </label>
+        <label for="company">
+          <span>Company</span>
+          <input type="text" name="company" id="company" />
+        </label>
+        @@include('../UI/button/main.html', {
+            class: 'primary',
+            text: 'Send'
+        })
+      </form>
+    </div>
+  </div>
+</section>

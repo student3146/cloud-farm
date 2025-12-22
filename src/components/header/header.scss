@@ -1,0 +1,34 @@
+.header {
+  &__wrapper {
+    @apply absolute top-[12px] right-0 left-0;
+    z-index: 100;
+  }
+  &__container {
+    @apply flex items-center justify-between rounded-[50px];
+    padding: 8px 8px 8px 16px;
+    background: #FFFFFFF5;
+    box-shadow: 0px 4px 9px 0px #0000000d;
+  }
+  &__nav {
+    @apply max-w-[370px] w-full;
+    ul {
+      @apply flex items-center;
+      grid-column-gap: 40px;
+      grid-row-gap: 40px;
+      li > a {
+        @apply relative inline-block transition-all duration-300 ease-in-out;
+        font-family: "Roboto", sans-serif;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 24px;
+        color: #000;
+        &::before {
+          @apply absolute content-[''] bottom-[-4px] right-0 w-0 h-[2px] bg-black transition-all duration-300 ease-in-out;
+        }
+        &:hover::before {
+          @apply w-full left-0;
+        }
+      }
+    }
+  }
+}

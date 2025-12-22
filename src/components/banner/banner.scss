@@ -1,0 +1,92 @@
+.banner {
+  &-credit {
+    @apply relative overflow-hidden h-full;
+    background: #032817;
+    isolation: isolate;
+    padding-top: 118px;
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 50% auto auto 50%;
+
+      width: 622px;
+      height: 622px;
+      border-radius: 50%;
+      background: #005e33;
+      filter: blur(120.4630584716797px);
+      transform: translate(-50%, -50%);
+
+      pointer-events: none;
+      z-index: -1;
+    }
+    > * {
+      position: relative;
+      z-index: 1;
+    }
+    &__container {
+      @apply flex flex-col items-center h-full;
+    }
+    &__partners {
+      @apply flex items-center max-w-[512px] w-full;
+      grid-column-gap: 12px;
+      grid-row-gap: 12px;
+      margin-bottom: 22px;
+      &-partner {
+        @apply flex justify-center items-center rounded-[16px];
+        max-width: 250px;
+        width: 100%;
+        height: 92px;
+        background: #fff;
+        box-shadow: 0px 4.08px 8.15px 0px #0000001a;
+        z-index: 1;
+      }
+    }
+    &__heading {
+      @apply flex flex-col;
+      grid-column-gap: 12px;
+      grid-row-gap: 12px;
+      margin-bottom: 32px;
+      z-index: 1;
+      h1 {
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 140%;
+        color: #edfff7;
+        text-align: center;
+      }
+      p {
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 152%;
+        color: #edfff7;
+        text-align: center;
+      }
+    }
+  }
+}
+
+.swiper-banner {
+  height: 582px;
+
+  &-pagination {
+    @apply absolute flex items-center justify-center;
+    bottom: 30px;        
+    left: 50%;            
+    transform: translateX(-50%); 
+    display: flex;
+    gap: 8px;            
+    z-index: 20;
+    .swiper-pagination-bullet {
+      display: block;
+      width: 30px;
+      height: 9px;
+      border-radius: 16px;
+      background: #ffffff33;
+      transition: background 0.3s ease;
+
+      &-active {
+        background: #ffffff;
+      }
+    }
+  }
+}

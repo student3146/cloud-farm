@@ -1,0 +1,15 @@
+.footer {
+    @apply w-full;
+    &__container {
+        @apply flex items-center justify-between;
+        padding-top: 28px;
+        padding-bottom: 28px;
+        border-top: 1px solid #0000001F;
+        p {
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 167%;
+            color: #000;
+        }
+    }
+}

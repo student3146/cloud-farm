@@ -1,0 +1,69 @@
+.market-promotion {
+  @apply w-full;
+  margin-top: 72px;
+  margin-bottom: 30px;
+  &--title {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 110%;
+    color: #006034;
+    text-align: center;
+    margin-bottom: 32px;
+  }
+  &__content {
+    @apply flex flex-wrap;
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+  }
+  &--card {
+    @apply flex flex-col max-w-[570px];
+    grid-column-gap: 12px;
+    grid-row-gap: 12px;
+    height: 242px;
+    background: #fff;
+    box-shadow: 0px 0px 23px 0px #00000014;
+    border-radius: 20px;
+    padding: 20px;
+    &__heading {
+      @apply flex items-center;
+      grid-column-gap: 12px;
+      grid-row-gap: 12px;
+      &--icon {
+        @apply flex justify-center items-center rounded-[50px];
+        width: 40px;
+        height: 40px;
+        background: #498067;
+        box-shadow: 0px 5px 10px 0px #0000001a;
+      }
+      h5 {
+        font-family: "Roboto";
+        font-size: 22px;
+        font-weight: 600;
+        line-height: 125%;
+        color: #000000;
+      }
+    }
+    &--list {
+      @apply flex flex-col;
+
+      &--item {
+        position: relative;
+        padding-left: 24px;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 167%;
+        color: #000000;
+        &::after {
+          content: "";
+          @apply absolute rounded-full;
+          width: 6px;
+          height: 6px;
+          left: 0;
+          top: 12px;
+          transform: translateY(-50%);
+          background-color: #000;
+        }
+      }
+    }
+  }
+}

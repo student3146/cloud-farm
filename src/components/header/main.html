@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"
+    />
+    @@if (context.description) {
+    <meta name="description" content="@@description" />
+    }
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="img/favicons/apple-touch-icon.png"
+    />
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/logo.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="img/favicons/favicon-16x16.png"
+    />
+    <link rel="manifest" href="img/favicons/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="img/favicons/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.min.css?v=2.0.0" />
+    <link rel="stylesheet" href="/css/swiper.css">
+    <script src="/js/swiper.js"></script>
+    @@if (context.title) {
+    <title>@@title</title>
+    }
+  </head>
+  <header class="header">
+      <div class="header__wrapper">
+        <div class="header__container container">
+            <a href="#" class="header-logo">
+              <img src="../img/logo.png" alt="logo-img">
+            </a>
+            <nav class="header__nav">
+              <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Title 1</a></li>
+                <li><a href="#">Title 2</a></li>
+                <li><a href="#">Contacts</a></li>
+              </ul>
+            </nav>
+            @@include('../UI/button/main.html', {
+              class: 'primary',
+              text: 'Order Service'
+            })
+        </div>
+      </div>
+  </header>
+  <body class="max-h-full h-full min-h-full collectionsIsOpen"></body>
+  <!-- <script async src="https://unpkg.com/leaflet/dist/leaflet.js"></script> -->
+</html>

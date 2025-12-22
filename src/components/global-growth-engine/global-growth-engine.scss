@@ -1,0 +1,94 @@
+.global-growth-engine {
+  @apply relative overflow-hidden w-full py-[52px];
+  background: #ecf7ee;
+  height: 502px;
+  z-index: 0;
+  &::before {
+    @apply absolute right-0 top-[27px] w-full h-full max-w-[795px] max-h-[546px]
+           bg-no-repeat bg-contain z-[-1] pointer-events-none;
+    content: "";
+    background-image: linear-gradient(
+        rgba(236, 247, 238, 0.8),
+        rgba(236, 247, 238, 0.8)
+      ),
+      url("../img/world.png");
+  }
+      &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 92px;
+      pointer-events: none;
+      background: linear-gradient(
+        180deg,
+        rgba(236, 247, 238, 0.13) 0%,
+        #ecf7ee 100%
+      );
+    }
+  &__container {
+    @apply relative flex h-full;
+  }
+  .scaling-infrastructure {
+    @apply flex flex-col max-w-[669px] w-full;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    &__heading {
+      @apply flex flex-col;
+      grid-column-gap: 20px;
+      grid-row-gap: 20px;
+      h2 {
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 110%;
+        color: #006034;
+      }
+      p {
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 152%;
+        color: #000000;
+      }
+    }
+    button {
+      max-width: 186px;
+    }
+  }
+  .content-intelligence {
+    @apply absolute right-[16px] flex flex-col overflow-auto;
+    grid-column-gap: 16px;
+    grid-row-gap: 16px;
+    top: 0;
+    bottom: -50px;
+    min-height: 0;
+    align-items: stretch;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    &--card {
+      @apply flex gap-3 p-4 rounded-[20px] max-w-[418px] w-full bg-white;
+      padding: 16px;
+      min-height: 113px;
+      align-self: flex-start;
+      flex-shrink: 0;
+      p {
+        font-family: "Roboto";
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 152%;
+        color: #000000;
+        span {
+          font-weight: 700;
+        }
+      }
+      svg {
+        width: 16px;
+        height: 16px;
+        flex-shrink: 0;
+        margin-top: 6px;
+      }
+    }
+  }
+}
