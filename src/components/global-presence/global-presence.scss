@@ -2,19 +2,33 @@
     @apply w-full;
     margin-top: 72px;
     margin-bottom: 72px;
+    @media(max-width: 810px) {
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
     &__container {
         @apply flex items-center justify-between w-full;
         grid-column-gap: 30px;
         grid-row-gap: 30px;
+        @media(max-width: 810px) {
+            @apply flex-col;
+        }
     }
     &--card {
         @apply flex items-start max-w-[370px] w-full;
         grid-column-gap: 16px;
         grid-row-gap: 16px;
+        @media(max-width: 810px) {
+            @apply flex-col;
+            max-width: 100%;
+        }
         svg {
             width: 32px;
             height: 32px;
             flex-shrink: 0;
+            @media(max-width: 810px) {
+                align-self: center;
+            }
         }
         p {
             font-family: 'Roboto';
@@ -22,6 +36,9 @@
             font-weight: 400;
             line-height: 167%;
             color: #000000;
+            @media(max-width: 810px) {
+                text-align: center;
+            }
             span {
                 font-weight: 700;
             }

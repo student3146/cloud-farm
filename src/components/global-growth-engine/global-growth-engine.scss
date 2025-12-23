@@ -3,6 +3,12 @@
   background: #ecf7ee;
   height: 502px;
   z-index: 0;
+  @media(max-width: 1100px) {
+    height: auto;
+  }
+  @media(max-width: 820px) {
+    @apply py-[32px];
+  }
   &::before {
     @apply absolute right-0 top-[27px] w-full h-full max-w-[795px] max-h-[546px]
            bg-no-repeat bg-contain z-[-1] pointer-events-none;
@@ -12,6 +18,9 @@
         rgba(236, 247, 238, 0.8)
       ),
       url("../img/world.png");
+       @media(max-width: 820px) {
+        top: 50%;
+       }
   }
       &::after {
       content: "";
@@ -29,26 +38,54 @@
     }
   &__container {
     @apply relative flex h-full;
+        @media(max-width: 820px) {
+          @apply flex-col;
+        }
   }
   .scaling-infrastructure {
     @apply flex flex-col max-w-[669px] w-full;
     grid-column-gap: 20px;
     grid-row-gap: 20px;
+    @media(max-width: 1100px) {
+      max-width: 500px;
+    }
+    @media(max-width: 957px) {
+      max-width: 358px;
+    }
+    @media(max-width: 820px) {
+      max-width: 100%;
+      margin-bottom: 24px;
+      .scaling-btn-desktop {
+        display: none;
+      }
+    }
     &__heading {
       @apply flex flex-col;
       grid-column-gap: 20px;
       grid-row-gap: 20px;
+      @media(max-width: 820px) {
+            grid-column-gap: 16px;
+      grid-row-gap: 16px;  
+      }
       h2 {
         font-size: 48px;
         font-weight: 700;
         line-height: 110%;
         color: #006034;
+        @media(max-width: 820px) {
+          font-size: 32px;
+          line-height: 120%;
+        }
       }
       p {
         font-size: 20px;
         font-weight: 400;
         line-height: 152%;
         color: #000000;
+         @media(max-width: 820px) {
+          font-size: 18px;
+          line-height: 160%;
+         }
       }
     }
     button {
@@ -63,7 +100,19 @@
     bottom: -50px;
     min-height: 0;
     align-items: stretch;
-
+    .scaling-btn-mobile {
+      display: none;
+    }
+    @media(max-width: 820px) {
+      position: relative;
+      right: 0;
+      bottom: 0;
+      .scaling-btn-mobile {
+        display: flex;
+        max-width: 186px;
+        align-self: center;
+      }
+    }
     &::-webkit-scrollbar {
       display: none;
     }
@@ -73,12 +122,19 @@
       min-height: 113px;
       align-self: flex-start;
       flex-shrink: 0;
+      @media(max-width: 820px) {
+        @apply max-w-full;
+        min-height: auto;
+      }
       p {
         font-family: "Roboto";
         font-size: 18px;
         font-weight: 400;
         line-height: 152%;
         color: #000000;
+        @media(max-width: 560px) {
+          font-size: 16px;
+        }
         span {
           font-weight: 700;
         }
