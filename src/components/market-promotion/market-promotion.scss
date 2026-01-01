@@ -52,6 +52,7 @@
       @apply flex items-center;
       grid-column-gap: 12px;
       grid-row-gap: 12px;
+      margin-left: 12px;
       @media (max-width: 560px) {
         @apply flex-col items-start;
         padding-left: 12px;
@@ -86,7 +87,7 @@
           @apply absolute rounded-full;
           width: 6px;
           height: 6px;
-          left: 0;
+          left: 8px;
           top: 12px;
           transform: translateY(-50%);
           background-color: #000;

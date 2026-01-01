@@ -4,6 +4,10 @@
     background: #032817;
     isolation: isolate;
     padding-top: 118px;
+    .btn {
+      max-width: 186px;
+      width: 100%;
+    }
     @media (max-width: 890px) {
       padding-top: 26px;
     }
